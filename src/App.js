@@ -3,7 +3,7 @@ import Home from './components/Home';
 import ChatPage from './components/ChatPage';
 import socketIO from 'socket.io-client';
 
-const socket = socketIO.connect('https://chat-app-b0x7.onrender.com');
+const socket = socketIO.connect('https://chat-app-b0x7.onrender.com',{ transports: ['websocket', 'polling', 'flashsocket'] });
 function App() {
   return (
     <BrowserRouter>
